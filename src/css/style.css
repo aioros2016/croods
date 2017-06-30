@@ -301,8 +301,8 @@ body {
   line-height: 1.2rem;
 }
 .detail-box .text img {
-	margin: 10px 0;
-	width: 100%;
+  margin: 10px 0;
+  width: 100%;
 }
 .features-area h2 {
   width: 5.275rem;
@@ -327,7 +327,6 @@ body {
 }
 .features-area .swiper-features img {
   width: 100%;
-  vertical-align: middle;
 }
 .features-area .swiper-features .swiper-pagination {
   position: static;
@@ -380,6 +379,7 @@ body {
   background-position: -5.9rem -2.975rem;
 }
 .news-area .tabs .content ol {
+  display: none;
 }
 .news-area .tabs .content ol li {
   position: relative;
@@ -549,6 +549,7 @@ body {
   font-size: .5rem;
 }
 .mask2 {
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -558,6 +559,7 @@ body {
   background: rgba(0, 0, 0, 0.7);
 }
 .video-box {
+  display: none;
   position: fixed;
   left: 0;
   top: 50%;
@@ -798,7 +800,10 @@ body {
     transform: rotate(0deg);
   }
 }
-
+.rotatePhone {
+  -webkit-animation: rotatePhone 2s ease-out infinite;
+  animation: rotatePhone 2s ease-out infinite;
+}
 @-webkit-keyframes fadeInUp2 {
   from {
     opacity: 0;
@@ -827,11 +832,3 @@ body {
   -webkit-animation: fadeInUp2 1s ease-out infinite;
   animation: fadeInUp2 1s ease-out infinite;
 }
-
-@media all and (orientation: landscape) {
-	.mask { display: block;}
-	.rotatePhone {
-	  -webkit-animation: rotatePhone 2s ease-out infinite;
-	  animation: rotatePhone 2s ease-out infinite;
-	}
-} 

@@ -1,31 +1,22 @@
 {
-  "name": "croods-mobile",
-  "description": "A Vue.js project",
+  "name": "m.croods.com",
   "version": "1.0.0",
-  "author": "aioros2016 <xiaozhishmily@aliyun.com>",
-  "private": true,
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "vue": "^2.2.1"
-  },
+  "author": "aioros",
+  "license": "ISC",
   "devDependencies": {
-    "axios": "^0.15.3",
-    "babel-core": "^6.0.0",
-    "babel-loader": "^6.0.0",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-latest": "^6.0.0",
-    "cross-env": "^3.0.0",
-    "css-loader": "^0.25.0",
-    "file-loader": "^0.9.0",
-    "style-loader": "^0.13.2",
-    "vue-loader": "^11.1.4",
-    "vue-router": "^2.3.0",
-    "vue-template-compiler": "^2.2.1",
-    "vuex": "^2.2.1",
-    "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0"
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.1.0",
+    "gulp-if": "^2.0.2",
+    "gulp-less": "^3.3.0",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "run-sequence": "^1.2.2"
   }
 }
