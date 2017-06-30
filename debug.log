@@ -1,3 +1,0 @@
-[0122/180446:ERROR:process_reader_win.cc(142)] SuspendThread: ¾Ü¾ø·ÃÎÊ¡£ (0x5)
-[0122/180446:ERROR:exception_snapshot_win.cc(87)] thread ID 1960 not found in process
-[0122/180446:WARNING:crash_report_exception_handler.cc(61)] ProcessSnapshotWin::Initialize failed
