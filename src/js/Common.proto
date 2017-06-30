@@ -1,0 +1,9 @@
+﻿option java_package = "com.opd2c.croodswar.protocol";
+
+enum MsgCmdDef {	        
+    //排行榜
+    HTTP_VIEW_PLAYRANKLIST=22201;          //查看玩家排行榜
+ 
+    HTTP_VIEW_LASTRANKLIST=22203;      //查看上赛季排行榜
+
+}

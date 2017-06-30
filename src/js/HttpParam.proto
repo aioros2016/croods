@@ -1,0 +1,42 @@
+﻿option java_package = "com.opd2c.croodswar.protocol";
+import "Common.proto";
+
+//玩家排行榜
+message C2SViewPlayerRanking {
+	required string token = 1;
+}
+
+message S2CViewPlayerRanking {
+	repeated PlayerRankInfo playerRankInfo = 1;
+	required int32 timeRemaining = 2; //剩余时间
+} 
+
+ /**
+ * 查看玩家上赛季排名
+ */ message C2SLastPlayerRanking {
+	required string token = 1;
+}
+
+message S2CLastPlayerRanking {
+	repeated LastRacePlayerRankInfo lastRacePlayerRankInfo = 1;
+}
+
+//上赛季玩家排行榜
+message LastRacePlayerRankInfo {
+	required string playId = 1;
+	required string name = 2; //玩家名称
+	required int32 trophy = 3; //玩家奖杯数
+	required int32 level = 4; //玩家等级
+	required string familyName = 5; //家族
+}
+
+//玩家基本信息
+message PlayerRankInfo {
+	required string playId = 1;
+	required int32 trophy = 2; //玩家奖杯数
+	required string name = 3; //玩家名字
+	required int32 level = 4; //玩家等级
+	required string familyName = 5; //玩家所对应家族的名族，没有家族则为空
+	required int32 lastRanking = 6; //上次排名
+	required int32 iconId = 7; //玩家头像
+}

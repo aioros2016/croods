@@ -1,0 +1,159 @@
+<div class="content">
+	<div class="main">
+		<div class="clearfix">
+			<div class="slide-show" id="slide-show">
+				<ul>
+					<li style="opacity: 1; z-index: 2;"><a ui-sref="detail({id: 11})"><img src="images/s1.jpg" alt="" /></a></li>
+					<li><a ui-sref="detail({id: 9})"><img src="images/s2.jpg" alt="" /></a></li>
+					<li><a ui-sref="detail({id: 9})"><img src="images/s3.jpg" alt="" /></a></li>
+				</ul>
+				<ol>
+					<li class="active">1</li>
+					<li>2</li>
+					<li>3</li>
+				</ol>
+			</div>
+			<div class="news-box" id="news-box">
+				<div class="menu">
+					<ol>
+						<li class="active"><a href="javascript:;">综合</a></li>
+						<li><a href="javascript:;">新闻</a></li>
+						<li><a href="javascript:;">公告</a></li>
+						<li><a href="javascript:;">攻略</a></li>
+					</ol>
+					<div class="more">
+						<a ui-sref="category.total" title="更多内容">+</a>
+					</div>
+				</div>
+				
+				<div class="content">
+					<ul>
+						<li style="opacity: 1;">
+							<div class="hot" ng-hide="integratedHot.length == 0">
+								<a ui-sref="detail({id: art.postId})">
+									<span class="tip">热门</span>
+									<span class="txt" ng-bind="integratedHot[0].title"></span>
+								</a>
+							</div>
+							<div class="list">
+								<div ng-repeat="art in integrated">
+									<a ui-sref="detail({id: art.postId})">
+										<span class="tip">[{{art.category | chn}}]</span>
+										<span class="txt" ng-bind="art.title"></span>
+									</a>
+									<em ng-bind="art.datetime"></em>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="hot" ng-hide="newsHot.length == 0">
+								<a ui-sref="detail({id: art.postId})">
+									<span class="tip">热门</span>
+									<span class="txt" ng-bind="newsHot[0].title"></span>
+								</a>
+							</div>
+							<div class="list">
+								<div ng-repeat="art in news">
+									<a ui-sref="detail({id: art.postId})"><span class="tip">[{{art.category | chn}}]</span><span class="txt" ng-bind="art.title"></span></a>
+									<em ng-bind="art.datetime"></em>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="hot" ng-hide="noticeHot.length == 0">
+								<a ui-sref="detail({id: art.postId})">
+									<span class="tip">热门</span>
+									<span class="txt" ng-bind="noticeHot[0].title"></span>
+								</a>
+							</div>
+							<div class="list">
+								<div ng-repeat="art in notice">
+									<a ui-sref="detail({id: art.postId})"><span class="tip">[{{art.category | chn}}]</span><span class="txt" ng-bind="art.title"></span></a>
+									<em ng-bind="art.datetime"></em>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="hot" ng-hide="raidersHot.length == 0">
+								<a ui-sref="detail({id: art.postId})">
+									<span class="tip">热门</span>
+									<span class="txt" ng-bind="mediaHot[0].title"></span>
+								</a>
+							</div>
+							<div class="list">
+								<div ng-repeat="art in raiders">
+									<a ui-sref="detail({id: art.postId})"><span class="tip">[{{art.category | chn}}]</span><span class="txt" ng-bind="art.title"></span></a>
+									<em ng-bind="art.datetime"></em>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="guide">
+				<div class="title"><a href="javascript:;" onclick="alert('暂未开放，敬请期待')"><img src="images/title_guide.jpg" /></a></div>
+				<div class="content">
+					<table id="rank" width="100%" border="0" cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<th>排名</th>
+								<th>角色名</th>
+								<th>积分</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!--<tr ng-repeat="item in rank">
+								<td><i class="n{{$index+1}}">{{$index+1}}</i></td>
+								<td>{{item.userName}}</td>
+								<td>{{item.trophy}}</td>
+							</tr>-->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="rows">
+			<div class="about-mode" id="about-mode">
+				<ul>
+					<li><img src="images/mode_01.jpg" /></li>
+					<li><img src="images/mode_02.jpg" /></li>
+					<li><img src="images/mode_03.jpg" /></li>
+					<li><img src="images/mode_04.jpg" /></li>
+				</ul>
+			</div>
+		</div>
+		<div class="rows clearfix">
+			<div class="media-news" id="media-news">
+				<h2>媒体专区</h2>
+				<div class="menu">
+					<ol>
+						<li class="active"><a href="javascript:;">18183</a></li>
+					</ol>
+				</div>
+				<div class="content">
+					<ul>
+						<li style="opacity: 1;">
+							<iframe src="http://www.18183.com/api/temone/?typeid=444" width="100%" frameborder="0" scrolling="no"></iframe>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="media-logo">
+				<h2>媒体合作</h2>
+				<div class="list">
+					<ul>
+						<li class="logo-18touch"><a href="http://www.18touch.com/" target="_blank">logo1</a></li>
+						<li class="logo-18183"><a href="http://games.qq.com/" target="_blank">logo2</a></li>
+						<li class="logo-youxiduo"><a href="http://www.youxiduo.com/" target="_blank">logo3</a></li>
+						<li class="logo-17173"><a href="http://www.17173.com" target="_blank">logo4</a></li>
+						<li class="logo-zm"><a href="http://games.sina.com.cn/" target="_blank">logo5</a></li>
+						<li class="logo-wankr"><a href="http://www.18183.com" target="_blank">logo6</a></li>
+						<li class="logo-ptbus"><a href="http://www.ptbus.com" target="_blank">logo7</a></li>
+						<li class="logo-shouyoutv"><a href="http://www.gamedog.cn/" target="_blank">logo8</a></li>
+						<li class="logo-mmj"><a href="http://play.163.com/" target="_blank">logo9</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

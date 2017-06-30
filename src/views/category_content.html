@@ -1,0 +1,26 @@
+<div class="inner-main">
+	<div class="sidebar">
+		<h2>扫一扫立即下载游戏</h2>
+		<div class="code-box"><img src="images/2wm.jpg" alt="扫一扫立即下载游戏" width="195" height="195" /></div>
+		<div class="download-box">
+			<ul>
+				<li class="apple"><a href="http://itunes.apple.com/cn/app/id1195735446?mt=8" target="_blank" title="App Store下载">App Store下载</a></li>
+				<li class="android"><a href="http://pro-update-cw.opd2c.com/download/croods_ippa_pro.apk" target="_blank" title="安卓下载">安卓下载</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="category-box">
+		<div class="title" ng-show="showCatePath">
+			<h2 ng-bind="title"></h2>
+			<span class="location-map">您所在的位置: <a ui-sref="index" ui-sref-opts="{reload:true}">首页</a> > {{cate | chn}}</span>
+		</div>
+		<div class="list-box">
+			<div class="menu" id="category-menu" ng-show="cateShow()">
+				<ol>
+					<li class="{{$index == nowCate ? 'active' : ''}}" ng-repeat="category in category"><a ui-sref="{{category.href}}">{{category.name}}</a></li>
+				</ol>
+			</div>
+			<div ui-view="viewBox"></div>
+		</div>
+	</div>
+</div>
